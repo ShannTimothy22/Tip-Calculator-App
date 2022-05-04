@@ -1,0 +1,188 @@
+@import "config";
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  background: map-get($secondary-color, Light-grayish-cyan);
+  height: 100vh;
+}
+
+.text-secondary {
+  color: map-get($secondary-color, Grayish-cyan);
+  font-size: 16px;
+  margin-bottom: 0.3rem;
+}
+
+::placeholder {
+  color: map-get($secondary-color, Very-dark-cyan);
+  opacity: 1;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+}
+
+header {
+  width: 100%;
+
+  .logo {
+    max-width: 85px;
+    margin: 3.2rem auto 2.6rem auto;
+  }
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: $neutral-color;
+  border-radius: 15px 15px 0 0;
+
+  .splitter {
+    padding: 2.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .bill-container {
+      &__input {
+        margin-bottom: 0.85rem;
+        .icon-dollar {
+          max-width: 12px;
+          position: relative;
+          bottom: 33px;
+          left: 20px;
+        }
+
+        .bill {
+          width: 100%;
+          padding: 0.45rem 1rem;
+          background-color: map-get($secondary-color, Very-light-grayish-cyan);
+          border: none;
+          border-radius: 12px;
+          text-align: right;
+          font-size: 24px;
+          color: map-get($secondary-color, Very-dark-cyan);
+          font-weight: 700;
+        }
+      }
+
+      &__select {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+
+        .text-secondary {
+          margin-bottom: 1rem;
+        }
+
+        .select-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.05rem;
+
+          .select-tip {
+            padding: 0.4rem;
+            border: none;
+            background: map-get($secondary-color, Very-dark-cyan);
+            color: $neutral-color;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: 700;
+
+            &__custom {
+              background-color: map-get(
+                $secondary-color,
+                Very-light-grayish-cyan
+              );
+              border: none;
+              color: map-get($secondary-color, Dark-grayish-cyan);
+              font-size: 24px;
+              text-align: right;
+              padding-right: 1rem;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      &__Nop {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.9rem;
+
+        .icon-person {
+          max-width: 12px;
+          position: relative;
+          bottom: 33px;
+          left: 20px;
+        }
+
+        .Nop {
+          width: 100%;
+          padding: 0.45rem 1rem;
+          background-color: map-get($secondary-color, Very-light-grayish-cyan);
+          border: none;
+          border-radius: 12px;
+          text-align: right;
+          font-size: 24px;
+          color: map-get($secondary-color, Very-dark-cyan);
+          font-weight: 700;
+        }
+      }
+    }
+
+    .tip-container {
+      background: map-get($secondary-color, Very-dark-cyan);
+      padding: 1.4rem 0.25rem;
+      border-radius: 12px;
+
+      h2 {
+        font-size: 16px;
+        color: $neutral-color;
+      }
+      h3 {
+        font-size: 12px;
+        color: map-get($secondary-color, Grayish-cyan);
+      }
+      &__amount {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .number {
+          font-size: 32px;
+          color: $primary-color;
+          font-weight: 700;
+        }
+      }
+
+      &__total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.3rem 1rem 2rem;
+
+        .number {
+          font-size: 32px;
+          color: $primary-color;
+          font-weight: 700;
+        }
+      }
+
+      .reset {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.6rem;
+        background: $primary-color;
+        border: none;
+        font-size: 20px;
+        font-weight: 700;
+        color: map-get($secondary-color, Very-dark-cyan);
+        border-radius: 8px;
+      }
+    }
+  }
+}
