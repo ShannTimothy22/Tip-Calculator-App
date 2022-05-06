@@ -67,14 +67,28 @@ header {
 
 header .logo {
   max-width: 85px;
-  margin: 3.2rem auto 2.6rem auto;
+  margin: 3.2rem auto 2.6rem;
+}
+
+@media all and (min-width: 1440px) {
+  header .logo {
+    margin: 5.2rem auto 3.2rem;
+  }
 }
 
 main {
-  height: 100%;
   width: 100%;
   background-color: white;
   border-radius: 15px 15px 0 0;
+  overflow: hidden;
+}
+
+@media all and (min-width: 1440px) {
+  main {
+    width: 64.5%;
+    border-radius: 27px;
+    margin: auto;
+  }
 }
 
 main .splitter {
@@ -88,8 +102,21 @@ main .splitter {
           flex-direction: column;
 }
 
-main .splitter .bill-container__input {
-  margin-bottom: 0.85rem;
+@media all and (min-width: 1440px) {
+  main .splitter {
+    padding: 2rem 2.5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container {
+    padding-left: 0.8rem;
+  }
 }
 
 main .splitter .bill-container__input .icon-dollar {
@@ -100,7 +127,7 @@ main .splitter .bill-container__input .icon-dollar {
 }
 
 main .splitter .bill-container__input .bill {
-  width: 100%;
+  width: 98%;
   padding: 0.45rem 1rem;
   background-color: #f4fafa;
   border: none;
@@ -109,6 +136,19 @@ main .splitter .bill-container__input .bill {
   font-size: 24px;
   color: #00494d;
   font-weight: 700;
+}
+
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container__input .bill {
+    padding: 0.38rem 1.2rem;
+    border-radius: 8px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container__input {
+    padding: 0.9rem 0 1.6rem;
+  }
 }
 
 main .splitter .bill-container__select {
@@ -122,6 +162,12 @@ main .splitter .bill-container__select {
   margin-bottom: 2em;
 }
 
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container__select {
+    margin-bottom: 2.5em;
+  }
+}
+
 main .splitter .bill-container__select .text-secondary {
   margin-bottom: 1rem;
 }
@@ -132,6 +178,16 @@ main .splitter .bill-container__select .select-container {
   -ms-grid-columns: (minmax(0, 1fr))[2];
       grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.05rem;
+}
+
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container__select .select-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.95rem;
+  }
 }
 
 main .splitter .bill-container__select .select-container .select-tip {
@@ -147,6 +203,12 @@ main .splitter .bill-container__select .select-container .select-tip {
   transition: all 0.5s ease-in-out;
 }
 
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container__select .select-container .select-tip {
+    padding: 0.4rem;
+  }
+}
+
 main .splitter .bill-container__select .select-container .select-tip__custom {
   background-color: #f4fafa;
   border: none;
@@ -155,6 +217,12 @@ main .splitter .bill-container__select .select-container .select-tip__custom {
   padding-right: 1rem;
   font-size: 24px;
   font-weight: 700;
+}
+
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container__select .select-container .select-tip__custom {
+    padding-right: 1.5rem;
+  }
 }
 
 main .splitter .bill-container__select .select-container .select-tip__custom.active {
@@ -190,12 +258,24 @@ main .splitter .bill-container__Nop .people-text .text-secondary {
   font-size: 14px;
 }
 
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container__Nop .people-text .text-secondary {
+    font-size: 16px;
+  }
+}
+
 main .splitter .bill-container__Nop .people-text .error-msg {
   color: red;
   font-size: 14px;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+@media all and (min-width: 1440px) {
+  main .splitter .bill-container__Nop .people-text .error-msg {
+    font-size: 18px;
+  }
 }
 
 main .splitter .bill-container__Nop .people-text .show-error-msg {
@@ -223,21 +303,28 @@ main .splitter .bill-container__Nop .Nop {
 
 main .splitter .tip-container {
   background: #00494d;
-  padding: 1.4rem 0.25rem;
+  padding: 1.4rem 0.25rem 2.4rem;
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-main .splitter .tip-container h2 {
-  font-size: 16px;
-  color: white;
+@media all and (min-width: 1440px) {
+  main .splitter .tip-container {
+    margin-bottom: 0.9rem;
+    padding: 1.7rem 1.5rem 2.4rem;
+  }
 }
 
-main .splitter .tip-container h3 {
-  font-size: 12px;
-  color: #7f9c9f;
-}
-
-main .splitter .tip-container__amount {
+main .splitter .tip-container__text .tip-container__amount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,13 +337,35 @@ main .splitter .tip-container__amount {
   padding: 1rem;
 }
 
-main .splitter .tip-container__amount .number {
+main .splitter .tip-container__text .tip-container__amount h2 {
+  font-size: 16px;
+  color: white;
+}
+
+main .splitter .tip-container__text .tip-container__amount h3 {
+  font-size: 12px;
+  color: #7f9c9f;
+}
+
+main .splitter .tip-container__text .tip-container__amount .number {
   font-size: 32px;
   color: #26c0ab;
   font-weight: 700;
 }
 
-main .splitter .tip-container__total {
+@media all and (min-width: 1440px) {
+  main .splitter .tip-container__text .tip-container__amount .number {
+    font-size: 48px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  main .splitter .tip-container__text .tip-container__amount {
+    padding-bottom: 1.3rem;
+  }
+}
+
+main .splitter .tip-container__text .tip-container__total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,10 +378,26 @@ main .splitter .tip-container__total {
   padding: 0.3rem 1rem 2rem;
 }
 
-main .splitter .tip-container__total .number {
+main .splitter .tip-container__text .tip-container__total h2 {
+  font-size: 16px;
+  color: white;
+}
+
+main .splitter .tip-container__text .tip-container__total h3 {
+  font-size: 12px;
+  color: #7f9c9f;
+}
+
+main .splitter .tip-container__text .tip-container__total .number {
   font-size: 32px;
   color: #26c0ab;
   font-weight: 700;
+}
+
+@media all and (min-width: 1440px) {
+  main .splitter .tip-container__text .tip-container__total .number {
+    font-size: 48px;
+  }
 }
 
 main .splitter .tip-container .reset {

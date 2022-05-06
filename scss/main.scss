@@ -1,4 +1,4 @@
-@import "config";
+@import "config", "responsive";
 
 img {
   display: block;
@@ -29,24 +29,46 @@ header {
 
   .logo {
     max-width: 85px;
-    margin: 3.2rem auto 2.6rem auto;
+    margin: 3.2rem auto 2.6rem;
+
+    @include media-lg {
+      margin: 5.2rem auto 3.2rem;
+      // margin: 10.2rem auto 5.5rem;
+    }
   }
 }
 
 main {
-  height: 100%;
   width: 100%;
   background-color: $neutral-color;
   border-radius: 15px 15px 0 0;
+  overflow: hidden;
+
+  @include media-lg {
+    width: 64.5%;
+    // height: 44.8%;
+    border-radius: 27px;
+    margin: auto;
+  }
 
   .splitter {
     padding: 2.2rem 2rem;
     display: flex;
     flex-direction: column;
 
+    @include media-lg {
+      padding: 2rem 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
     .bill-container {
+      @include media-lg {
+        padding-left: 0.8rem;
+      }
+
       &__input {
-        margin-bottom: 0.85rem;
         .icon-dollar {
           max-width: 12px;
           position: relative;
@@ -55,7 +77,7 @@ main {
         }
 
         .bill {
-          width: 100%;
+          width: 98%;
           padding: 0.45rem 1rem;
           background-color: map-get($secondary-color, Very-light-grayish-cyan);
           border: none;
@@ -64,6 +86,15 @@ main {
           font-size: 24px;
           color: map-get($secondary-color, Very-dark-cyan);
           font-weight: 700;
+
+          @include media-lg {
+            padding: 0.38rem 1.2rem;
+            border-radius: 8px;
+          }
+        }
+
+        @include media-lg {
+          padding: 0.9rem 0 1.6rem;
         }
       }
 
@@ -71,6 +102,10 @@ main {
         display: flex;
         flex-direction: column;
         margin-bottom: 2em;
+
+        @include media-lg {
+          margin-bottom: 2.5em;
+        }
 
         .text-secondary {
           margin-bottom: 1rem;
@@ -80,6 +115,12 @@ main {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 1.05rem;
+
+          @include media-lg {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.95rem;
+          }
 
           .select-tip {
             padding: 0.4rem;
@@ -92,6 +133,10 @@ main {
             cursor: pointer;
             @include transition-ease;
 
+            @include media-lg {
+              padding: 0.4rem;
+            }
+
             &__custom {
               background-color: map-get(
                 $secondary-color,
@@ -103,6 +148,10 @@ main {
               padding-right: 1rem;
               font-size: 24px;
               font-weight: 700;
+
+              @include media-lg {
+                padding-right: 1.5rem;
+              }
             }
 
             &__custom.active {
@@ -131,13 +180,21 @@ main {
 
           .text-secondary {
             font-size: 14px;
+
+            @include media-lg {
+              font-size: 16px;
+            }
           }
 
           .error-msg {
             color: red;
             font-size: 14px;
-            opacity: 0;
+            opacity: 1;
             @include transition-ease;
+
+            @include media-lg {
+              font-size: 18px;
+            }
           }
 
           .show-error-msg {
@@ -168,40 +225,72 @@ main {
 
     .tip-container {
       background: map-get($secondary-color, Very-dark-cyan);
-      padding: 1.4rem 0.25rem;
+      padding: 1.4rem 0.25rem 2.4rem;
       border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-      h2 {
-        font-size: 16px;
-        color: $neutral-color;
+      @include media-lg {
+        margin-bottom: 0.9rem;
+        padding: 1.7rem 1.5rem 2.4rem;
       }
-      h3 {
-        font-size: 12px;
-        color: map-get($secondary-color, Grayish-cyan);
-      }
-      &__amount {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
 
-        .number {
-          font-size: 32px;
-          color: $primary-color;
-          font-weight: 700;
+      &__text {
+        .tip-container__amount {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+
+          h2 {
+            font-size: 16px;
+            color: $neutral-color;
+          }
+          h3 {
+            font-size: 12px;
+            color: map-get($secondary-color, Grayish-cyan);
+          }
+
+          .number {
+            font-size: 32px;
+            color: $primary-color;
+            font-weight: 700;
+
+            @include media-lg {
+              font-size: 48px;
+            }
+          }
+
+          @include media-lg {
+            padding-bottom: 1.3rem;
+          }
         }
-      }
 
-      &__total {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.3rem 1rem 2rem;
+        .tip-container__total {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.3rem 1rem 2rem;
 
-        .number {
-          font-size: 32px;
-          color: $primary-color;
-          font-weight: 700;
+          h2 {
+            font-size: 16px;
+            color: $neutral-color;
+          }
+          h3 {
+            font-size: 12px;
+            color: map-get($secondary-color, Grayish-cyan);
+          }
+
+          .number {
+            font-size: 32px;
+            color: $primary-color;
+            font-weight: 700;
+
+            @include media-lg {
+              font-size: 48px;
+            }
+          }
         }
       }
 
