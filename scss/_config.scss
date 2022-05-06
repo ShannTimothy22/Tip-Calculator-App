@@ -10,11 +10,6 @@ $secondary-color: (
 
 $neutral-color: hsl(0, 0%, 100%);
 
-@font-face {
-  font-family: "Space Mono";
-  src: url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
-}
-
 *,
 *::before,
 *::after {
@@ -22,4 +17,13 @@ $neutral-color: hsl(0, 0%, 100%);
   padding: 0;
   margin: 0;
   font-family: "Space Mono", monospace;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
 }

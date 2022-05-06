@@ -78,7 +78,7 @@ main {
 
         .select-container {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 1.05rem;
 
           .select-tip {
@@ -89,6 +89,8 @@ main {
             border-radius: 8px;
             font-size: 24px;
             font-weight: 700;
+            cursor: pointer;
+            @include transition-ease;
 
             &__custom {
               background-color: map-get(
@@ -97,11 +99,23 @@ main {
               );
               border: none;
               color: map-get($secondary-color, Dark-grayish-cyan);
-              font-size: 24px;
               text-align: right;
               padding-right: 1rem;
+              font-size: 24px;
               font-weight: 700;
             }
+
+            &__custom.active {
+              background-color: map-get(
+                $secondary-color,
+                Very-light-grayish-cyan
+              );
+            }
+          }
+
+          .active {
+            background: $primary-color;
+            color: map-get($secondary-color, Very-dark-cyan);
           }
         }
       }
@@ -110,6 +124,26 @@ main {
         display: flex;
         flex-direction: column;
         margin-bottom: 0.9rem;
+
+        .people-text {
+          display: flex;
+          justify-content: space-between;
+
+          .text-secondary {
+            font-size: 14px;
+          }
+
+          .error-msg {
+            color: red;
+            font-size: 14px;
+            opacity: 0;
+            @include transition-ease;
+          }
+
+          .show-error-msg {
+            opacity: 1;
+          }
+        }
 
         .icon-person {
           max-width: 12px;
@@ -182,6 +216,7 @@ main {
         font-weight: 700;
         color: map-get($secondary-color, Very-dark-cyan);
         border-radius: 8px;
+        cursor: pointer;
       }
     }
   }

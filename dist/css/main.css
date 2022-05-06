@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Space Mono";
-  src: url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
-}
-
 *,
 *::before,
 *::after {
@@ -11,6 +6,11 @@
   padding: 0;
   margin: 0;
   font-family: "Space Mono", monospace;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 }
 
 img {
@@ -129,8 +129,8 @@ main .splitter .bill-container__select .text-secondary {
 main .splitter .bill-container__select .select-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.05rem;
 }
 
@@ -142,16 +142,28 @@ main .splitter .bill-container__select .select-container .select-tip {
   border-radius: 8px;
   font-size: 24px;
   font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 main .splitter .bill-container__select .select-container .select-tip__custom {
   background-color: #f4fafa;
   border: none;
   color: #5e7a7d;
-  font-size: 24px;
   text-align: right;
   padding-right: 1rem;
+  font-size: 24px;
   font-weight: 700;
+}
+
+main .splitter .bill-container__select .select-container .select-tip__custom.active {
+  background-color: #f4fafa;
+}
+
+main .splitter .bill-container__select .select-container .active {
+  background: #26c0ab;
+  color: #00494d;
 }
 
 main .splitter .bill-container__Nop {
@@ -163,6 +175,31 @@ main .splitter .bill-container__Nop {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 0.9rem;
+}
+
+main .splitter .bill-container__Nop .people-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .splitter .bill-container__Nop .people-text .text-secondary {
+  font-size: 14px;
+}
+
+main .splitter .bill-container__Nop .people-text .error-msg {
+  color: red;
+  font-size: 14px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main .splitter .bill-container__Nop .people-text .show-error-msg {
+  opacity: 1;
 }
 
 main .splitter .bill-container__Nop .icon-person {
@@ -251,5 +288,6 @@ main .splitter .tip-container .reset {
   font-weight: 700;
   color: #00494d;
   border-radius: 8px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
