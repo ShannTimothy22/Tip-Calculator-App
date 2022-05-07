@@ -137,6 +137,11 @@ main {
               padding: 0.4rem;
             }
 
+            &:hover {
+              background-color: #9fe8df;
+              color: map-get($secondary-color, Very-dark-cyan);
+            }
+
             &__custom {
               background-color: map-get(
                 $secondary-color,
@@ -307,6 +312,14 @@ main {
         border-radius: 8px;
         cursor: pointer;
         text-align: center;
+        justify-content: center;
+        align-items: center;
+        @include transition-ease;
+
+        &:hover {
+          background-color: #9fe8df;
+          color: map-get($secondary-color, Very-dark-cyan);
+        }
       }
     }
   }

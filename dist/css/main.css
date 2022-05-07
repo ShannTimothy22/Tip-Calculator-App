@@ -209,6 +209,11 @@ main .splitter .bill-container__select .select-container .select-tip {
   }
 }
 
+main .splitter .bill-container__select .select-container .select-tip:hover {
+  background-color: #9fe8df;
+  color: #00494d;
+}
+
 main .splitter .bill-container__select .select-container .select-tip__custom {
   background-color: #f4fafa;
   border: none;
@@ -415,5 +420,18 @@ main .splitter .tip-container .reset {
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main .splitter .tip-container .reset:hover {
+  background-color: #9fe8df;
+  color: #00494d;
 }
 /*# sourceMappingURL=main.css.map */
