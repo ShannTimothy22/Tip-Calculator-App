@@ -267,7 +267,7 @@ main .splitter .bill-container__Nop .people-text .text-secondary {
 main .splitter .bill-container__Nop .people-text .error-msg {
   color: red;
   font-size: 14px;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
