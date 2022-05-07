@@ -51,6 +51,13 @@ main {
     margin: auto;
   }
 
+  @include media-md {
+    width: 64.5%;
+    // height: 44.8%;
+    border-radius: 27px;
+    margin: auto;
+  }
+
   .splitter {
     padding: 2.2rem 2rem;
     display: flex;

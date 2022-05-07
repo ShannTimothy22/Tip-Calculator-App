@@ -70,7 +70,7 @@ header .logo {
   margin: 3.2rem auto 2.6rem;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   header .logo {
     margin: 5.2rem auto 3.2rem;
   }
@@ -83,7 +83,15 @@ main {
   overflow: hidden;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
+  main {
+    width: 64.5%;
+    border-radius: 27px;
+    margin: auto;
+  }
+}
+
+@media all and (min-width: 500px) {
   main {
     width: 64.5%;
     border-radius: 27px;
@@ -102,7 +110,7 @@ main .splitter {
           flex-direction: column;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter {
     padding: 2rem 2.5rem;
     display: -ms-grid;
@@ -113,7 +121,7 @@ main .splitter {
   }
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container {
     padding-left: 0.8rem;
   }
@@ -138,14 +146,14 @@ main .splitter .bill-container__input .bill {
   font-weight: 700;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container__input .bill {
     padding: 0.38rem 1.2rem;
     border-radius: 8px;
   }
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container__input {
     padding: 0.9rem 0 1.6rem;
   }
@@ -162,7 +170,7 @@ main .splitter .bill-container__select {
   margin-bottom: 2em;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container__select {
     margin-bottom: 2.5em;
   }
@@ -180,7 +188,7 @@ main .splitter .bill-container__select .select-container {
   gap: 1.05rem;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container__select .select-container {
     display: -ms-grid;
     display: grid;
@@ -203,7 +211,7 @@ main .splitter .bill-container__select .select-container .select-tip {
   transition: all 0.5s ease-in-out;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container__select .select-container .select-tip {
     padding: 0.4rem;
   }
@@ -224,7 +232,7 @@ main .splitter .bill-container__select .select-container .select-tip__custom {
   font-weight: 700;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container__select .select-container .select-tip__custom {
     padding-right: 1.5rem;
   }
@@ -263,7 +271,7 @@ main .splitter .bill-container__Nop .people-text .text-secondary {
   font-size: 14px;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container__Nop .people-text .text-secondary {
     font-size: 16px;
   }
@@ -277,7 +285,7 @@ main .splitter .bill-container__Nop .people-text .error-msg {
   transition: all 0.5s ease-in-out;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .bill-container__Nop .people-text .error-msg {
     font-size: 18px;
   }
@@ -322,7 +330,7 @@ main .splitter .tip-container {
           justify-content: space-between;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .tip-container {
     margin-bottom: 0.9rem;
     padding: 1.7rem 1.5rem 2.4rem;
@@ -358,13 +366,13 @@ main .splitter .tip-container__text .tip-container__amount .number {
   font-weight: 700;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .tip-container__text .tip-container__amount .number {
     font-size: 48px;
   }
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .tip-container__text .tip-container__amount {
     padding-bottom: 1.3rem;
   }
@@ -399,7 +407,7 @@ main .splitter .tip-container__text .tip-container__total .number {
   font-weight: 700;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1200px) {
   main .splitter .tip-container__text .tip-container__total .number {
     font-size: 48px;
   }

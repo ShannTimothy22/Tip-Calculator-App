@@ -29,13 +29,13 @@ $neutral-color: hsl(0, 0%, 100%);
 }
 
 @mixin media-md {
-  @media all and (min-width: 1024px) {
+  @media all and (min-width: 500px) {
     @content;
   }
 }
 
 @mixin media-lg {
-  @media all and (min-width: 1440px) {
+  @media all and (min-width: 1200px) {
     @content;
   }
 }
